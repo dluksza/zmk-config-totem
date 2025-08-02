@@ -61,7 +61,7 @@ label= "BASE"                              ;
                 &kp Q        &kp W      &kp E       &kp R      &kp T           &kp Y       &kp U       &kp I       &kp O       &kp P
                 &mt LSHIFT A &mt LALT S &mt LCTRL D &kp F      &kp G           &kp H       &kp J       &mt RCTRL K &mt RALT L  &mt RSHIFT SEMI
     &kp TAB     &kp Z        &kp X      &kp C       &kp V      &kp B           &kp K       &kp M       &kp COMMA   &kp DOT     &lt NUM FSLH    &kp RET
-                                        &kp LGUI    &kp BSPC   &lt NUM ESC     &kp DEL     &lt NAV SPACE &kp GRAVE      
+                                        &kp LGUI    &kp BSPC   &lt NAV ESC     &kp DEL     &lt NAV SPACE &kp GRAVE      
                         >;
                 };
 
@@ -99,21 +99,21 @@ label= "NUM"                              ;
 label= "NAV"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃     !     ┃     @     ┃     #     ┃     $     ┃     %     ┃   ┃   PgUp    ┃   HOME    ┃    End    ┃     '     ┃     "     ┃
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃   PgUp    ┃   HOME    ┃    End    ┃           ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃     ←     ┃    ↓      ┃     ↑     ┃  POUND    ┃           ┃
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃     ⬅     ┃    ⬇      ┃     ⬆     ┃     →     ┃           ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃  EMAIL1   ┃  EMAIL2   ┃           ┃           ┃           ┃   ┃   PgDn    ┃  M Prev   ┃  M Play   ┃   NEXT    ┃     \     ┃           ┃
+// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃   PgDn    ┃  M Prev   ┃  M Play   ┃  M Next   ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃           ┃           ┃    ADJ    ┃   ┃           ┃           ┃           ┃
+//                                     ┃           ┃           ┃           ┃   ┃           ┃    ⇓      ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
-// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷             ╷            ╷           ╷           ╷           ╷           ╷
 
-                &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp KP_MULTIPLY &kp SQT     &kp DQT       
-                &kp         &trans      &trans      &trans      &trans          &kp C_MUTE  &trans      &kp RA(N5)      &kp RA(N4)  &trans
-    &trans      &kp RA(F18) &kp RA(F19) &trans      &trans      &trans          &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV    &kp C_NEXT  &kp BSLH   &trans         
-                                        &trans      &trans      &mo ADJ         &trans      &kp C_PP    &trans      
+                &trans      &trans      &trans      &trans      &trans          &kp PAGE_UP   &kp HOME     &kp END     &trans     &trans
+                &trans      &trans      &trans      &trans      &trans          &kp LEFT      &kp DOWN     &kp UP      &kp RIGHT  &trans
+    &trans      &trans      &trans      &trans      &trans      &trans          &kp PAGE_DOWN &kp C_PREV   &kp C_PP    &kp C_NEXT &trans   &trans         
+                                        &trans      &trans      &trans          &trans        &trans       &trans      
                         >;
                 };
 
