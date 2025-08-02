@@ -51,7 +51,7 @@ label= "BASE"                              ;
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃    ⇧/A    ┃    ⌥/S    ┃    ^/D    ┃     F     ┃     G     ┃   ┃     H     ┃     J     ┃    ^/K    ┃    ⌥/L    ┃    ⇧/;    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃ spc TAB   ┃     Z     ┃     X     ┃     C     ┃     V     ┃     B     ┃   ┃     N     ┃     M     ┃     ,     ┃     .     ┃   num /   ┃   ENTER   ┃
+// ┃ meh TAB   ┃     Z     ┃     X     ┃     C     ┃     V     ┃     B     ┃   ┃     N     ┃     M     ┃     ,     ┃     .     ┃   num /   ┃   ENTER   ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃     ⌘     ┃   BSPC    ┃ nav ESC   ┃   ┃    DEL    ┃ nav SPC   ┃     `     ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -134,12 +134,12 @@ label= "ADJ"                               ;
 //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
-// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+// ╷           ╷           ╷           ╷            ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &sys_reset  &bt BT_CLR &out OUT_TOG &trans      &trans          &trans      &trans      &trans      &trans      &trans
-                &bootloader &bt BT_NXT  &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans  
-    &trans      &trans      &bt BT_PRV  &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans     &trans         
-                                        &trans      &trans      &trans          &trans      &trans      &trans      
+                &sys_reset  &bt BT_CLR  &out OUT_TOG &trans      &trans          &trans      &trans      &trans      &trans      &trans
+                &bootloader &bt BT_NXT  &trans       &trans      &trans          &trans      &trans      &trans      &trans      &trans  
+    &trans      &trans      &bt BT_PRV  &trans       &trans      &trans          &trans      &trans      &trans      &trans      &trans     &trans         
+                                        &trans       &trans      &trans          &trans      &trans      &trans      
                         >;
                 };
 
