@@ -15,6 +15,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
 #define NUM  1
@@ -90,9 +91,9 @@ label= "NUM"                               ;
 label= "NAV"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃   PgUp    ┃   HOME    ┃    End    ┃ Next Tab  ┃ Prev Tab  ┃
+//             ┃           ┃    LMB    ┃     UP    ┃    RMB    ┃  SC UP    ┃   ┃   PgUp    ┃   HOME    ┃    End    ┃ Next Tab  ┃ Prev Tab  ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃     ⬅     ┃     ⬇     ┃     ⬆     ┃     →     ┃           ┃
+//             ┃           ┃    LEFT   ┃    DOWN   ┃   RIGHT   ┃  SC DOWN  ┃   ┃     ⬅     ┃     ⬇     ┃     ⬆     ┃     →     ┃           ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃   PgDn    ┃  M Prev   ┃  M Play   ┃  M Next   ┃    Back   ┃  Forward  ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -101,10 +102,10 @@ label= "NAV"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷             ╷            ╷           ╷           ╷           ╷           ╷
 
-               &trans      &trans      &trans      &trans      &trans          &kp PAGE_UP   &kp HOME     &kp END     &kp LG(LBRC) &kp LG(RBRC)
-               &trans      &trans      &trans      &trans      &trans          &kp LEFT      &kp DOWN     &kp UP      &kp RIGHT    &trans
-   &trans      &trans      &trans      &trans      &trans      &trans          &kp PAGE_DOWN &kp C_PREV   &kp C_PP    &kp C_NEXT   &kp K_BACK &kp K_FORWARD
-                                       &trans      &trans      &trans          &trans        &trans       &trans
+               &trans      &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &msc SCRL_UP    &kp PAGE_UP   &kp HOME     &kp END     &kp LG(LBRC) &kp LG(RBRC)
+               &trans      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN  &kp LEFT      &kp DOWN     &kp UP      &kp RIGHT    &trans
+   &trans      &trans      &trans         &trans         &trans          &trans          &kp PAGE_DOWN &kp C_PREV   &kp C_PP    &kp C_NEXT   &kp K_BACK &kp K_FORWARD
+                                          &trans         &trans          &trans          &trans        &trans       &trans
             >;
                 };
 
