@@ -99,20 +99,20 @@ label= "NUM"                               ;
 label= "NAV"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃   PgUp    ┃   HOME    ┃    End    ┃           ┃           ┃
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃   PgUp    ┃   HOME    ┃    End    ┃ Next Tab  ┃ Prev Tab  ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃     ⬅     ┃    ⬇      ┃     ⬆     ┃     →     ┃           ┃
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃     ⬅     ┃     ⬇     ┃     ⬆     ┃     →     ┃           ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃   PgDn    ┃  M Prev   ┃  M Play   ┃  M Next   ┃           ┃           ┃
+// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃   PgDn    ┃  M Prev   ┃  M Play   ┃  M Next   ┃    Back   ┃  Forward  ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃           ┃           ┃           ┃   ┃           ┃    ⇓      ┃           ┃
+//                                     ┃           ┃           ┃           ┃   ┃           ┃     ⇓     ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷             ╷            ╷           ╷           ╷           ╷           ╷
 
-                &trans      &trans      &trans      &trans      &trans          &kp PAGE_UP   &kp HOME     &kp END     &trans     &trans
-                &trans      &trans      &trans      &trans      &trans          &kp LEFT      &kp DOWN     &kp UP      &kp RIGHT  &trans
-    &trans      &trans      &trans      &trans      &trans      &trans          &kp PAGE_DOWN &kp C_PREV   &kp C_PP    &kp C_NEXT &trans   &trans         
+                &trans      &trans      &trans      &trans      &trans          &kp PAGE_UP   &kp HOME     &kp END     &kp LG(LBRC) &kp LG(RBRC)
+                &trans      &trans      &trans      &trans      &trans          &kp LEFT      &kp DOWN     &kp UP      &kp RIGHT    &trans
+    &trans      &trans      &trans      &trans      &trans      &trans          &kp PAGE_DOWN &kp C_PREV   &kp C_PP    &kp C_NEXT   &kp K_BACK  &kp K_FORWARD         
                                         &trans      &trans      &trans          &trans        &trans       &trans      
                         >;
                 };
