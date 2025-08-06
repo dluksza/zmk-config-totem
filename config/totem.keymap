@@ -130,7 +130,7 @@ display-name= "CODE"                              ;
 
                &trans      &trans      &trans      &kp BSLH    &kp LBRC        &kp RBRC      &kp BSLH     &trans      &trans      &trans
                &trans      &trans      &trans      &kp PIPE    &kp LBKT        &kp RBKT      &kp PIPE     &trans      &trans      &trans
-   &trans      &trans      &trans      &trans      &trans      &kp KP_LPAR     &kp KP_RPAR   &trans       &trans      &trans      &trans      &trans
+   &trans      &trans      &trans      &trans      &trans      &kp LPAR        &kp RPAR      &trans       &trans      &trans      &trans      &trans
                                        &trans      &trans      &trans          &trans        &trans       &kp LC(SPACE)
             >;
                 };
