@@ -35,7 +35,7 @@
 / {
      behaviours {
         /** -- Home Row Mods -- **/
-        hrm_l: home_row_mod_left {
+        hrmL: home_row_mod_left {
             label = "Home Row Mod: Left";
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -48,7 +48,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        hrm_r: home_row_mod_right {
+        hrmR: home_row_mod_right {
             label = "Home Row Mod: Right";
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -71,21 +71,21 @@
 display-name= "BASE"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃     Q     ┃     W     ┃     E     ┃     R     ┃     T     ┃   ┃     Y     ┃     U     ┃     I     ┃     O     ┃     P     ┃
+//             ┃     Q     ┃     W     ┃     E     ┃     R     ┃     T     ┃   ┃     Y     ┃    ⌘/U    ┃    ⌥/I    ┃    ^/O    ┃     P     ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃    ⇧/A    ┃    ⌥/S    ┃    ^/D    ┃     F     ┃     G     ┃   ┃     H     ┃     J     ┃    ^/K    ┃     L     ┃    ⇧/;    ┃
+//             ┃    ⇧/A    ┃    ^/S    ┃    ⌥/D    ┃    ⌘/F    ┃     G     ┃   ┃     H     ┃     J     ┃     K     ┃     L     ┃    ⇧/;    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃ meh TAB   ┃     Z     ┃     X     ┃     C     ┃     V     ┃     B     ┃   ┃     N     ┃     M     ┃     ,     ┃     .     ┃   num /   ┃   ENTER   ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃     ⌘     ┃   BSPC    ┃ code ESC  ┃   ┃    DEL    ┃ nav SPC   ┃    ⌥/`    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
-// ╷           ╷            ╷           ╷           ╷          ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+// ╷               ╷              ╷             ╷            ╷            ╷            ╷  ╷          ╷             ╷              ╷             ╷                 ╷       ╷
 
-                    &kp Q           &kp W         &kp E          &kp R      &kp T           &kp Y       &kp U       &kp I          &kp O       &kp P
-                    &hrm_l LSHIFT A &hrm_l LALT S &hrm_l LCTRL D &kp F      &kp G           &kp H       &kp J       &hrm_r RCTRL K &kp L       &hrm_r RSHIFT SEMI
-   &mt LA(LGUI) TAB &kp Z           &kp X         &kp C          &kp V      &kp B           &kp N       &kp M       &kp COMMA      &kp DOT     &lt NUM FSLH    &kp RET
-                                                  &kp LGUI       &kp BSPC   &lt CODE ESC    &kp DEL     &lt NAV SPACE &mt RALT GRAVE
+                    &kp Q          &kp W         &kp E        &kp R        &kp T           &kp Y      &hrmR RGUI U  &hrmR RALT I   &hrmR RCTRL O &kp P
+                    &hrmL LSHIFT A &hrmL LCTRL S &hrmL LALT D &hrmL LGUI F &kp G           &kp H      &kp J         &kp K          &kp L         &hrmR RSHIFT SEMI
+   &mt LA(LGUI) TAB &kp Z          &kp X         &kp C        &kp V        &kp B           &kp N      &kp M         &kp COMMA      &kp DOT       &lt NUM FSLH      &kp RET
+                                                 &kp LGUI     &kp BSPC     &lt CODE ESC    &kp DEL    &lt NAV SPACE &mt RALT GRAVE
             >;
                 };
 
