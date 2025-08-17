@@ -30,7 +30,7 @@
 /** -- Home Row Mods -- **/
 #define HRM_HOLDING_TIME 210
 #define HRM_STREAK_DECAY 150
-#define HRM_REPEAT_DECAY 300
+#define HRM_REPEAT_DECAY 290
 
 / {
      behaviours {
