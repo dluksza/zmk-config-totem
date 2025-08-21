@@ -28,7 +28,7 @@
 #define THUMBS 32 33 34 35 36 37                            // thumb keys
 
 /** -- Home Row Mods -- **/
-#define HRM_HOLDING_TIME 210
+#define HRM_HOLDING_TIME 215
 #define HRM_STREAK_DECAY 150
 #define HRM_REPEAT_DECAY 290
 
