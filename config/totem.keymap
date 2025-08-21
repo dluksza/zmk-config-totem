@@ -38,7 +38,7 @@
         hrmL: home_row_mod_left {
             label = "Home Row Mod: Left";
             compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release; // Wait for other home row mods
             tapping-term-ms = <HRM_HOLDING_TIME>;
@@ -51,7 +51,7 @@
         hrmR: home_row_mod_right {
             label = "Home Row Mod: Right";
             compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release; // Wait for other home row mods
             tapping-term-ms = <HRM_HOLDING_TIME>;
