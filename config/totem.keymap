@@ -28,9 +28,9 @@
 #define THUMBS 32 33 34 35 36 37                            // thumb keys
 
 /** -- Home Row Mods -- **/
-#define HRM_HOLDING_TIME 215
-#define HRM_STREAK_DECAY 150
-#define HRM_REPEAT_DECAY 290
+#define TAPPING_TERM_MS 215
+#define REQUIRE_PRIOR_IDLE_MS 150
+#define QUICK_TAP_MS 290
 
 / {
      behaviours {
@@ -40,9 +40,9 @@
             flavor = "tap-preferred";
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release; // Wait for other home row mods
-            tapping-term-ms = <HRM_HOLDING_TIME>;
-            quick-tap-ms = <HRM_REPEAT_DECAY>;
-            require-prior-idle-ms = <HRM_STREAK_DECAY>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
@@ -52,9 +52,9 @@
             flavor = "tap-preferred";
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release; // Wait for other home row mods
-            tapping-term-ms = <HRM_HOLDING_TIME>;
-            quick-tap-ms = <HRM_REPEAT_DECAY>;
-            require-prior-idle-ms = <HRM_STREAK_DECAY>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
