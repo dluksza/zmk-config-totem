@@ -32,14 +32,24 @@
 #define REQUIRE_PRIOR_IDLE_MS 150
 #define QUICK_TAP_MS 290
 
+#define hrm_LSHIFT(key) &hrmL_shift LSHIFT key
+#define hrm_LCTRL(key)  &hrmL_ctrl  LCTRL key
+#define hrm_LALT(key)   &hrmL_alt   LALT key
+#define hrm_LGUI(key)   &hrmL_gui   LGUI key
+
+#define hrm_RSHIFT(key) &hrmR_shift RSHIFT key
+#define hrm_RCTRL(key)  &hrmR_ctrl  RCTRL key
+#define hrm_RALT(key)   &hrmR_alt   RALT key
+#define hrm_RGUI(key)   &hrmR_gui   RGUI key
+
 / {
      behaviours {
-        /** -- Home Row Mods -- **/
-        hrmL: home_row_mod_left {
+        /** -- Home Row Mods - Left Hand -- **/
+        hrmL_shift: home_row_mod_left_shift {
             compatible = "zmk,behavior-hold-tap";
             flavor = "tap-preferred";
             hold-trigger-key-positions = <KEYS_R THUMBS>;
-            hold-trigger-on-release; // Wait for other home row mods
+            hold-trigger-on-release;
             tapping-term-ms = <TAPPING_TERM_MS>;
             quick-tap-ms = <QUICK_TAP_MS>;
             require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
@@ -47,11 +57,84 @@
             bindings = <&kp>, <&kp>;
         };
 
-        hrmR: home_row_mod_right {
+        hrmL_ctrl: home_row_mod_left_ctrl {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        hrmL_alt: home_row_mod_left_alt {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        hrmL_gui: home_row_mod_left_gui {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        /** -- Home Row Mods - Right Hand -- **/
+        hrmR_gui: home_row_mod_right_gui {
             compatible = "zmk,behavior-hold-tap";
             flavor = "tap-preferred";
             hold-trigger-key-positions = <KEYS_L THUMBS>;
-            hold-trigger-on-release; // Wait for other home row mods
+            hold-trigger-on-release;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        hrmR_alt: home_row_mod_right_alt {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        hrmR_ctrl: home_row_mod_right_ctrl {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        hrmR_shift: home_row_mod_right_shift {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
             tapping-term-ms = <TAPPING_TERM_MS>;
             quick-tap-ms = <QUICK_TAP_MS>;
             require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
@@ -78,12 +161,12 @@ display-name= "BASE"                              ;
 //                                     ┃     ⌘     ┃   BSPC    ┃ code ESC  ┃   ┃    DEL    ┃ nav SPC   ┃    ⌥/`    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
-// ╷               ╷              ╷             ╷            ╷            ╷            ╷  ╷          ╷             ╷              ╷             ╷                 ╷       ╷
+// ╷               ╷             ╷            ╷           ╷           ╷            ╷  ╷       ╷             ╷              ╷            ╷                ╷       ╷
 
-                    &kp Q          &kp W         &kp E        &kp R        &kp T           &kp Y      &hrmR RGUI U  &hrmR RALT I   &hrmR RCTRL O &kp P
-                    &hrmL LSHIFT A &hrmL LCTRL S &hrmL LALT D &hrmL LGUI F &kp G           &kp H      &kp J         &kp K          &kp L         &hrmR RSHIFT SEMI
-   &mt LA(LGUI) TAB &kp Z          &kp X         &kp C        &kp V        &kp B           &kp N      &kp M         &kp COMMA      &kp DOT       &lt NUM FSLH      &kp RET
-                                                 &kp LGUI     &kp BSPC     &lt CODE ESC    &kp DEL    &lt NAV SPACE &mt RALT GRAVE
+                    &kp Q         &kp W        &kp E       &kp R       &kp T           &kp Y   hrm_RGUI(U)   hrm_RALT(I)    hrm_RCTRL(O) &kp P
+                    hrm_LSHIFT(A) hrm_LCTRL(S) hrm_LALT(D) hrm_LGUI(F) &kp G           &kp H   &kp J         &kp K          &kp L        hrm_RSHIFT(SEMI)
+   &mt LA(LGUI) TAB &kp Z         &kp X        &kp C       &kp V       &kp B           &kp N   &kp M         &kp COMMA      &kp DOT      &lt NUM FSLH     &kp RET
+                                               &kp LGUI    &kp BSPC    &lt CODE ESC    &kp DEL &lt NAV SPACE &mt RALT GRAVE
             >;
                 };
 
