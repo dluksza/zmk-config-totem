@@ -32,20 +32,20 @@
 #define REQUIRE_PRIOR_IDLE_MS 150
 #define QUICK_TAP_MS 290
 
-#define hrm_LSHIFT(key) &hrmL_shift LSHIFT key
-#define hrm_LCTRL(key)  &hrmL_ctrl  LCTRL key
-#define hrm_LALT(key)   &hrmL_alt   LALT key
-#define hrm_LGUI(key)   &hrmL_gui   LGUI key
+#define hrm_LSHIFT(key) &hrmL_pinky  LSHIFT key
+#define hrm_LCTRL(key)  &hrmL_ring   LCTRL key
+#define hrm_LALT(key)   &hrmL_middle LALT key
+#define hrm_LGUI(key)   &hrmL_index  LGUI key
 
-#define hrm_RSHIFT(key) &hrmR_shift RSHIFT key
-#define hrm_RCTRL(key)  &hrmR_ctrl  RCTRL key
-#define hrm_RALT(key)   &hrmR_alt   RALT key
-#define hrm_RGUI(key)   &hrmR_gui   RGUI key
+#define hrm_RSHIFT(key) &hrmR_pinky  RSHIFT key
+#define hrm_RCTRL(key)  &hrmR_ring   RCTRL key
+#define hrm_RALT(key)   &hrmR_middle RALT key
+#define hrm_RGUI(key)   &hrmR_index  RGUI key
 
 / {
      behaviours {
         /** -- Home Row Mods - Left Hand -- **/
-        hrmL_shift: home_row_mod_left_shift {
+        hrmL_pinky: home_row_mod_left_pinky {
             compatible = "zmk,behavior-hold-tap";
             flavor = "tap-preferred";
             hold-trigger-key-positions = <KEYS_R THUMBS>;
@@ -57,7 +57,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        hrmL_ctrl: home_row_mod_left_ctrl {
+        hrmL_ring: home_row_mod_left_ring {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             hold-trigger-key-positions = <KEYS_R THUMBS>;
@@ -69,7 +69,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        hrmL_alt: home_row_mod_left_alt {
+        hrmL_middle: home_row_mod_left_middle {
             compatible = "zmk,behavior-hold-tap";
             flavor = "tap-preferred";
             hold-trigger-key-positions = <KEYS_R THUMBS>;
@@ -81,7 +81,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        hrmL_gui: home_row_mod_left_gui {
+        hrmL_index: home_row_mod_left_index {
             compatible = "zmk,behavior-hold-tap";
             flavor = "tap-preferred";
             hold-trigger-key-positions = <KEYS_R THUMBS>;
@@ -94,7 +94,7 @@
         };
 
         /** -- Home Row Mods - Right Hand -- **/
-        hrmR_gui: home_row_mod_right_gui {
+        hrmR_index: home_row_mod_right_index {
             compatible = "zmk,behavior-hold-tap";
             flavor = "tap-preferred";
             hold-trigger-key-positions = <KEYS_L THUMBS>;
@@ -106,7 +106,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        hrmR_alt: home_row_mod_right_alt {
+        hrmR_middle: home_row_mod_right_middle {
             compatible = "zmk,behavior-hold-tap";
             flavor = "tap-preferred";
             hold-trigger-key-positions = <KEYS_L THUMBS>;
@@ -118,7 +118,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        hrmR_ctrl: home_row_mod_right_ctrl {
+        hrmR_ring: home_row_mod_right_ring {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             hold-trigger-key-positions = <KEYS_L THUMBS>;
@@ -130,7 +130,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        hrmR_shift: home_row_mod_right_shift {
+        hrmR_pinky: home_row_mod_right_pinky {
             compatible = "zmk,behavior-hold-tap";
             flavor = "tap-preferred";
             hold-trigger-key-positions = <KEYS_L THUMBS>;
