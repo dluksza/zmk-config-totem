@@ -112,7 +112,7 @@
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
             tapping-term-ms = <TAPPING_TERM_MS>;
-            quick-tap-ms = <225>;
+            quick-tap-ms = <230>;
             require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
