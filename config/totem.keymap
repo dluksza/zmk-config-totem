@@ -59,11 +59,11 @@
 
         hrmL_ring: home_row_mod_left_ring {
             compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
-            tapping-term-ms = <225>;
-            quick-tap-ms = <QUICK_TAP_MS>;
+            tapping-term-ms = <190>;
+            quick-tap-ms = <220>;
             require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
@@ -120,11 +120,11 @@
 
         hrmR_ring: home_row_mod_right_ring {
             compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
-            tapping-term-ms = <225>;
-            quick-tap-ms = <QUICK_TAP_MS>;
+            tapping-term-ms = <190>;
+            quick-tap-ms = <220>;
             require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
