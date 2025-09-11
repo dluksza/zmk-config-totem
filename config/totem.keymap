@@ -111,8 +111,8 @@
             flavor = "tap-preferred";
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
-            tapping-term-ms = <185>;
-            quick-tap-ms = <210>;
+            tapping-term-ms = <240>;
+            quick-tap-ms = <270>;
             require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
