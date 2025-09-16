@@ -28,9 +28,9 @@
 #define THUMBS 32 33 34 35 36 37                            // thumb keys
 
 /** -- Home Row Mods -- **/
-#define TAPPING_TERM_MS 230
-#define REQUIRE_PRIOR_IDLE_MS 170
-#define QUICK_TAP_MS 320
+#define TAPPING_TERM_MS 220
+#define REQUIRE_PRIOR_IDLE_MS 160
+#define QUICK_TAP_MS 310
 
 #define hrm_LSHIFT(key) &hrmL_pinky  LSHIFT key
 #define hrm_LCTRL(key)  &hrmL_ring   LCTRL key
