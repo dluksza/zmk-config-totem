@@ -47,11 +47,10 @@
         /** -- Home Row Mods - Left Hand -- **/
         hrmL_pinky: home_row_mod_left_pinky {
             compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <KEYS_R THUMBS>;
-            tapping-term-ms = <250>;
-            quick-tap-ms = <250>;
-            require-prior-idle-ms = <125>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
