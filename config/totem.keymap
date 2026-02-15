@@ -137,6 +137,14 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
+
+        code_lt: code_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <150>;
+            bindings = <&mo>, <&kp>;
+        };
      };
 
      keymap {
@@ -162,7 +170,7 @@ display-name= "BASE"                              ;
                     &kp Q         &kp W        &kp E       &kp R       &kp T           &kp Y   hrm_RGUI(U)   hrm_RALT(I)    hrm_RCTRL(O) &kp P
                     hrm_LSHIFT(A) hrm_LCTRL(S) hrm_LALT(D) hrm_LGUI(F) &kp G           &kp H   &kp J         &kp K          &kp L        hrm_RSHIFT(SEMI)
    &mt LA(LGUI) TAB &kp Z         &kp X        &kp C       &kp V       &kp B           &kp N   &kp M         &kp COMMA      &kp DOT      &lt NUM FSLH     &kp RET
-                                               &kp LGUI    &kp BSPC    &lt CODE ESC    &kp DEL &lt NAV SPACE &mt RALT GRAVE
+                                               &kp LGUI    &kp BSPC    &code_lt CODE ESC    &kp DEL &lt NAV SPACE &mt RALT GRAVE
             >;
                 };
 
