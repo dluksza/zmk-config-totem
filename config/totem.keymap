@@ -262,7 +262,7 @@ display-name= "ADJ"                               ;
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃   RESET   ┃ BT CLEAR  ┃  OUT TOG  ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃ BOOTLOAD  ┃ BT NEXT   ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
+//             ┃ BOOTLOAD  ┃ BT NEXT   ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃ BOOTLOAD  ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃           ┃ BT PREV   ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -272,7 +272,7 @@ display-name= "ADJ"                               ;
 // ╷           ╷           ╷           ╷            ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                &sys_reset  &bt BT_CLR  &out OUT_TOG &trans      &trans          &trans      &trans      &trans      &trans      &trans
-               &bootloader &bt BT_NXT  &trans       &trans      &trans          &trans      &trans      &trans      &trans      &trans
+               &bootloader &bt BT_NXT  &trans       &trans      &trans          &trans      &trans      &trans      &trans      &bootloader
    &trans      &trans      &bt BT_PRV  &trans       &trans      &trans          &trans      &trans      &trans      &trans      &trans      &trans
                                        &trans       &trans      &trans          &trans      &trans      &trans
             >;
